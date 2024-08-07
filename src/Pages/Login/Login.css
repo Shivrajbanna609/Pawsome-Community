@@ -1,0 +1,138 @@
+
+.main {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    /* justify-content: s; */
+    /* line-height: 50px; */
+    position: relative;
+  }
+  
+  .login-side {
+    position: absolute;
+    left: 180px;
+    z-index: 0;
+  }
+  
+  .login {
+    margin: 25px auto;
+    padding: 80px 50px;
+    width: 460px;
+    border-radius: 5px;
+    background: #fff;
+    /* border: 1px solid black; */
+    box-shadow: 18px 18px 63px #d9d9d9,
+      -18px -18px 63px #ffffff;
+  }
+  
+  .login input {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 14px 12px;
+    font-size: 16px;
+    border-radius: 13px;
+    font-weight: 600;
+    font-family: Raleway, sans-serif;
+  }
+  
+  .login input[type=text],
+  .login input[type=password] {
+    border: 1px solid #000000;
+    transition: .2s;
+  }
+  
+  .login label {
+    font-weight: 500;
+  }
+  
+  .links span {
+    font-weight: 600;
+  }
+  
+  .login input[type=submit] {
+    border: none;
+    background: #EF5350;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+    margin: 20px 0px;
+  }
+  
+  .login input[type=submit]:hover {
+    background: #F44336;
+  }
+  
+  .login h2 {
+    margin: 20px 0 0;
+    color: #EF5350;
+    font-size: 32px;
+    font-weight: 600;
+  }
+  
+  .login p {
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #0000008a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+  }
+  
+  .logo-1 {
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    top: 132px;
+    left: 175px;
+    gap: 0px;
+    border-radius: 25px;
+    opacity: 0px;
+    background: #f6b2a248;
+  }
+  
+  .logo-1 img {
+    padding-top: 18px;
+  }
+  
+  .links {
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    margin-bottom: 10px;
+  }
+  
+  .links a {
+    display: table-cell;
+    font-size: 16px !important;
+    color: #ff413e !important;
+    font-weight: 600;
+  }
+  
+  .links a:first-child {
+    text-align: left;
+  }
+  
+  .links a:last-child {
+    text-align: right;
+  }
+  
+  .login h2,
+  .login p,
+  .login a {
+    text-align: center;
+  }
+  
+  .login a {
+    text-decoration: none;
+    font-size: .8em;
+  }
+  
+  .login a:visited {
+    color: inherit;
+  }
+  
+  .login a:hover {
+    text-decoration: underline;
+  }
