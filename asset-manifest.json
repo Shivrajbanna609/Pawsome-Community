@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Pawsome-Community/static/css/main.9353368f.css",
+    "main.js": "/Pawsome-Community/static/js/main.466e9b05.js",
+    "static/js/453.ed3810f9.chunk.js": "/Pawsome-Community/static/js/453.ed3810f9.chunk.js",
+    "static/media/cat_face_main_page.png": "/Pawsome-Community/static/media/cat_face_main_page.37c9d1f11e78fda349ac.png",
+    "static/media/mainpageimg.png": "/Pawsome-Community/static/media/mainpageimg.a42a4826e342abba0018.png",
+    "static/media/PC_logo.png": "/Pawsome-Community/static/media/PC_logo.8d77274e535661871a33.png",
+    "static/media/mainpagebottom.png": "/Pawsome-Community/static/media/mainpagebottom.62d7b1d4e359809b673a.png",
+    "index.html": "/Pawsome-Community/index.html",
+    "main.9353368f.css.map": "/Pawsome-Community/static/css/main.9353368f.css.map",
+    "main.466e9b05.js.map": "/Pawsome-Community/static/js/main.466e9b05.js.map",
+    "453.ed3810f9.chunk.js.map": "/Pawsome-Community/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9353368f.css",
+    "static/js/main.466e9b05.js"
+  ]
+}
