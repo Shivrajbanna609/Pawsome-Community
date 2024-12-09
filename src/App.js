@@ -15,6 +15,8 @@ function App() {
       {/* <SiteNavbar /> */}
       {/* <Login /> */}
       {/* <Signup />
+
+      
       <Changepassword />
       <Forgetpassword /> */}
       <Routes>
