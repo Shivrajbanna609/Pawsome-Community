@@ -39,10 +39,10 @@ function SiteNavbar() {
                             <Link to="/pet">Pet</Link>
                         </li>
                         <li className='mr-5'>
-                            <Link to="/chat">Chat</Link>
+                            <Link to="/Doctor">Doctor</Link>
                         </li>
                         <li className='mr-5'>
-                            <Link to="/about-us">About Us</Link>
+                            <Link to="/Chat">Chat</Link>
                         </li>
                     </ul>
 

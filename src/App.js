@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Pages/HomePage/Home';
 import Chat from './Pages/ChatPage/Chat';
-import AboutUs from './Pages/AboutUsPage/AboutUs';
+import Doctor from './Pages/Doctor/Doctor';
 import Pet from './Pages/PetPage/Pet';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/Signup';
@@ -22,7 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/chat" element={<Chat />} />
-        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/Doctor" element={<Doctor />} />
         <Route path="/pet" element={<Pet />} />
         <Route path="/login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
