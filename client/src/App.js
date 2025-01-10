@@ -6,6 +6,7 @@ import Login from './pages/Login/Login.js'
 import { ToastContainer } from 'react-toastify';
 import ForgetPassword from './pages/ForgetPassword/ForgetPassword.js';
 import AdminPage from './pages/AdminPage/AdminPage.js';
+import Whattodo from './pages/Whattodo/Whattodo.js';
 function App() {
   return (
     <> 
@@ -16,6 +17,7 @@ function App() {
         <Route path='/petpage' element={<PetPage/>}/>
         <Route path='/forget-password' element={<ForgetPassword/>}/>
         <Route path='/admin' element={<AdminPage/>}/>
+        <Route path='/whattodo' element={<Whattodo/>}/>
       </Routes>
     </>
   );

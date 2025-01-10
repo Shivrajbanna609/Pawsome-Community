@@ -1,0 +1,124 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* Container */
+.containerWTD {
+    max-width: 100%;
+    background-color: #f8f8f8;
+}
+
+/* Main content */
+.main-contentWTD {
+    padding: 4rem 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.hero-textWTD {
+    max-width: 800px;
+    margin-bottom: 2rem;
+}
+
+/* Content sections */
+.content-sectionWTD {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+}
+
+.text-contentWTD {
+    flex: 1;
+}
+
+.image-contentWTD {
+    flex: 1;
+}
+
+.section-imageWTD {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+h2 {
+    color: #e76f51;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.link-textWTD {
+    margin-top: 1rem;
+    color: #666;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    .containerWTD {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .content-sectionWTD {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .reverseWTD {
+        flex-direction: row-reverse;
+    }
+
+    .text-contentWTD {
+        padding: 2rem;
+    }
+
+    .image-contentWTD {
+        max-width: 50%;
+    }
+
+    .section-imageWTD {
+        height: 400px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 767px) {
+    .content-sectionWTD {
+        padding: 0;
+    }
+
+    .text-contentWTD {
+        padding: 1rem;
+    }
+
+    .section-imageWTD {
+        max-height: 300px;
+    }
+}
+
