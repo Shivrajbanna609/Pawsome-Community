@@ -10,12 +10,12 @@
 
 .container .left {
   padding-left: 140px;
-  font-size: 30px;
   font-family: "Roboto", sans-serif;
 }
 
 .left h1{
 text-align: left;
+font-size: 3.4rem;
 }
 
 .paw img {
