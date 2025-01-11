@@ -1,0 +1,110 @@
+.mainDOC {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .titleDOC {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    color: #333;
+  }
+  
+  .doctorsGridDOC {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .doctorCardDOC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid rgb(219, 112, 94);
+    border-radius: 16px;
+    transition: transform 0.2s ease;
+  }
+  
+  .doctorCardDOC:hover {
+    transform: translateY(-5px);
+  }
+  
+  .imageWrapperDOC {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  
+  .placeholderImageDOC {
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+  }
+  
+  .doctorImageDOC {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .doctorNameDOC {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #333;
+  }
+  
+  .qualificationDOC {
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .appointmentButtonDOC {
+    background-color: rgb(219, 112, 94);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+  
+  .appointmentButtonDOC:hover {
+    background-color: rgb(199, 92, 74);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .doctorsGridDOC {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .doctorsGridDOC {
+      grid-template-columns: 1fr;
+    }
+  
+    .mainDOC {
+      padding: 1rem;
+    }
+  
+    .titleDOC {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  
+    .doctorCardDOC {
+      padding: 1.5rem;
+    }
+  }
+  
+  
