@@ -7,7 +7,7 @@ export const AppContext = createContext();
 export const AppContextProvider = (props) => {
     axios.defaults.withCredentials = true;
 
-    const backendurl = 'https://pawsome-community.onrender.com';
+    const backendurl = 'http://localhost:4000';
     const [isLoggedin, setIsLoggedin] = useState(false);
     const [userData, setUserData] = useState(false);
 
