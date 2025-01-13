@@ -14,7 +14,7 @@ const port  = process.env.PORT || 4000
 
 connectDB()
 
-const allowedOrigins = ['http://localhost:3000']
+const allowedOrigins = ['https://pawsome-community-frontend.onrender.com']
 
 app.use(express.json())
 app.use(cookieParser())
