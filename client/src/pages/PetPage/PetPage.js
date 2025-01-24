@@ -1,12 +1,14 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import { Heart } from "lucide-react"
 import "./PetPage.css"
 import Navbar from "../../components/Navbar/Navbar.js"
+import { AppContext } from "../../Context/AppContect.jsx"
 
 export default function PetPage() {
   const [pets, setPets] = useState([])
   const [favorites, setFavorites] = useState([])
   const [selectedPet, setSelectedPet] = useState(null)
+  const { backendurl } = useContext(AppContext)
 
   useEffect(() => {
     fetchPets()
@@ -14,7 +16,7 @@ export default function PetPage() {
 
   const fetchPets = async () => {
     try {
-      const response = await fetch("http://localhost:4000/api/pets/getallpet")
+      const response = await fetch(`${backendurl}/api/pets/getallpet`)
       const data = await response.json()
       if (data.success) {
         setPets(data.pets)
