@@ -24,6 +24,10 @@ const PetSchema = new mongoose.Schema({
     adopted: {
         type: Boolean,
         default: false,
+    },
+    mobileNumber: {
+        type: String,
+        required: true,
     }
 }, { timestamps: true });
 

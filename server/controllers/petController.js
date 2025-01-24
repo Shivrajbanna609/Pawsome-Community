@@ -92,6 +92,7 @@ export const updatePet = async (req, res) => {
                 breed: req.body.breed,
                 description: req.body.description,
                 adopted: req.body.adopted === 'true',
+                mobileNumber: req.body.mobileNumber,
                 image: imageUrl
             },
             { new: true }

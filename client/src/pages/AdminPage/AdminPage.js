@@ -11,6 +11,7 @@ export default function AdminPage() {
         age: '',
         breed: '',
         image: null,
+        mobileNumber: '',
         description: '',
         adopted: false
     });
@@ -79,7 +80,7 @@ export default function AdminPage() {
             if (response.data.success) {
                 setSuccess(editingId ? 'Pet updated successfully' : 'Pet added successfully');
                 fetchPets();
-                setPet({ name: '', age: '', breed: '', image: null, description: '', adopted: false });
+                setPet({ name: '', age: '', breed: '', image: null, mobileNumber: '', description: '', adopted: false });
                 setEditingId(null);
             } else {
                 setError('Failed to save pet');
@@ -128,6 +129,7 @@ export default function AdminPage() {
                 <input type="number" name="age" placeholder="Age" value={pet.age} onChange={handleChange} required />
                 <input type="text" name="breed" placeholder="Breed" value={pet.breed} onChange={handleChange} required />
                 <input type="file" name="image" onChange={handleChange} accept="image/*" />
+                <input type="text" name="mobileNumber" placeholder="Mobile Number" value={pet.mobileNumber} onChange={handleChange} required />
                 <textarea name="description" placeholder="Description" value={pet.description} onChange={handleChange}></textarea>
                 <label>
                     Adopted:
@@ -145,6 +147,7 @@ export default function AdminPage() {
                         <th>Age</th>
                         <th>Breed</th>
                         <th>Image</th>
+                        <th>Mobile Number</th>
                         <th>Adopted</th>
                         <th>Actions</th>
                     </tr>
@@ -156,6 +159,7 @@ export default function AdminPage() {
                             <td>{pet.age}</td>
                             <td>{pet.breed}</td>
                             <td>{pet.image ? <img src={pet.image} alt={pet.name} style={{width: '50px', height: '50px'}} /> : 'No image'}</td>
+                            <td>{pet.mobileNumber}</td>
                             <td>{pet.adopted ? 'Yes' : 'No'}</td>
                             <td>
                                 <button onClick={() => handleEdit(pet)}>Edit</button>
@@ -168,4 +172,4 @@ export default function AdminPage() {
         </div>
     );
 }
-
+8

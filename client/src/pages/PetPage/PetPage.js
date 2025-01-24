@@ -99,6 +99,9 @@ export default function PetPage() {
               <strong>Breed:</strong> {selectedPet.breed}
             </p>
             <p>
+              <strong>Contact:</strong> {selectedPet.mobileNumber}
+            </p>
+            <p>
               <strong>Description:</strong> {selectedPet.description || "No description available."}
             </p>
             <button className="confirm-adopt-button">Confirm Adoption</button>
