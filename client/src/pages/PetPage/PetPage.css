@@ -36,31 +36,9 @@
   object-fit: cover;
 }
 
-.favorite-button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-.heart-icon {
-  width: 24px;
-  height: 24px;
-  color: white;
-  stroke-width: 2px;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-.favorite-button.active .heart-icon {
-  fill: white;
-}
 
 .pet-info {
   padding: 1rem;
-  background-color: white;
 }
 
 .pet-info h3 {
