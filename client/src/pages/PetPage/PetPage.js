@@ -74,7 +74,6 @@ export default function PetPage() {
                       className={`favorite-button ${favorites.includes(pet._id) ? "active" : ""}`}
                       onClick={() => toggleFavorite(pet._id)}
                     >
-                      <Heart className="heart-icon" />
                     </button>
                   </div>
                   <div className="pet-info">
