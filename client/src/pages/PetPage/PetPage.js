@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react"
 import { Heart } from "lucide-react"
-import "./PetPage.css"
+import "./PetPage.css" // Updated CSS import
 import Navbar from "../../components/Navbar/Navbar.js"
 import { AppContext } from "../../Context/AppContect.jsx"
 
@@ -8,6 +8,7 @@ export default function PetPage() {
   const [pets, setPets] = useState([])
   const [favorites, setFavorites] = useState([])
   const [selectedPet, setSelectedPet] = useState(null)
+  const [searchTerm, setSearchTerm] = useState("")
   const { backendurl } = useContext(AppContext)
 
   useEffect(() => {
@@ -28,6 +29,10 @@ export default function PetPage() {
     }
   }
 
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value)
+  }
+
   const toggleFavorite = (petId) => {
     setFavorites((prev) => (prev.includes(petId) ? prev.filter((id) => id !== petId) : [...prev, petId]))
   }
@@ -45,28 +50,33 @@ export default function PetPage() {
       <Navbar />
       <div className="pet-page">
         <main className="main-content">
+          <div className="search-bar">
+            <input type="text" placeholder="Search by breed..." value={searchTerm} onChange={handleSearch} />
+          </div>
           <section className="pets-grid">
-            {pets.map((pet) => (
-              <div key={pet._id} className="pet-card">
-                <div className="pet-image">
-                  <img src={pet.image || "default-pet.jpg"} alt={pet.name} />
-                  <button
-                    className={`favorite-button ${favorites.includes(pet._id) ? "active" : ""}`}
-                    onClick={() => toggleFavorite(pet._id)}
-                  >
-                    <Heart className="heart-icon" />
-                  </button>
+            {pets
+              .filter((pet) => pet.breed.toLowerCase().includes(searchTerm.toLowerCase()))
+              .map((pet) => (
+                <div key={pet._id} className="pet-card">
+                  <div className="pet-image">
+                    <img src={pet.image || "default-pet.jpg"} alt={pet.name} />
+                    <button
+                      className={`favorite-button ${favorites.includes(pet._id) ? "active" : ""}`}
+                      onClick={() => toggleFavorite(pet._id)}
+                    >
+                      <Heart className="heart-icon" />
+                    </button>
+                  </div>
+                  <div className="pet-info">
+                    <h3>{pet.name}</h3>
+                    <p>Age: {pet.age}</p>
+                    <p>Breed: {pet.breed}</p>
+                    <button className="adopt-button" onClick={() => openPopup(pet)}>
+                      Adopt Now
+                    </button>
+                  </div>
                 </div>
-                <div className="pet-info">
-                  <h3>{pet.name}</h3>
-                  <p>Age: {pet.age}</p>
-                  <p>Breed: {pet.breed}</p>
-                  <button className="adopt-button" onClick={() => openPopup(pet)}>
-                    Adopt Now
-                  </button>
-                </div>
-              </div>
-            ))}
+              ))}
           </section>
 
           <div className="pagination">
