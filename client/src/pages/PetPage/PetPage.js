@@ -1,19 +1,25 @@
 import { useState, useEffect, useContext } from "react"
 import { Heart } from "lucide-react"
-import "./PetPage.css" // Updated CSS import
+import "./PetPage.css"
 import Navbar from "../../components/Navbar/Navbar.js"
 import { AppContext } from "../../Context/AppContect.jsx"
+import { useNavigate } from "react-router-dom"
 
 export default function PetPage() {
   const [pets, setPets] = useState([])
   const [favorites, setFavorites] = useState([])
   const [selectedPet, setSelectedPet] = useState(null)
   const [searchTerm, setSearchTerm] = useState("")
-  const { backendurl } = useContext(AppContext)
+  const { backendurl, isLoggedin, userData } = useContext(AppContext)
+  const navigate = useNavigate()
 
   useEffect(() => {
-    fetchPets()
-  }, [])
+    if (!isLoggedin) {
+      navigate("/login")
+    } else {
+      fetchPets()
+    }
+  }, [isLoggedin, navigate])
 
   const fetchPets = async () => {
     try {
@@ -43,6 +49,10 @@ export default function PetPage() {
 
   const closePopup = () => {
     setSelectedPet(null)
+  }
+
+  if (!isLoggedin) {
+    return null // Return null while redirecting
   }
 
   return (
