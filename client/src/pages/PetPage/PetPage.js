@@ -1,5 +1,4 @@
 import { useState, useEffect, useContext } from "react"
-import { Heart } from "lucide-react"
 import "./PetPage.css"
 import Navbar from "../../components/Navbar/Navbar.js"
 import { AppContext } from "../../Context/AppContect.jsx"
@@ -7,10 +6,9 @@ import { useNavigate } from "react-router-dom"
 
 export default function PetPage() {
   const [pets, setPets] = useState([])
-  const [favorites, setFavorites] = useState([])
   const [selectedPet, setSelectedPet] = useState(null)
   const [searchTerm, setSearchTerm] = useState("")
-  const { backendurl, isLoggedin, userData } = useContext(AppContext)
+  const { backendurl, isLoggedin} = useContext(AppContext)
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -37,10 +35,6 @@ export default function PetPage() {
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value)
-  }
-
-  const toggleFavorite = (petId) => {
-    setFavorites((prev) => (prev.includes(petId) ? prev.filter((id) => id !== petId) : [...prev, petId]))
   }
 
   const openPopup = (pet) => {
@@ -70,11 +64,6 @@ export default function PetPage() {
                 <div key={pet._id} className="pet-card">
                   <div className="pet-image">
                     <img src={pet.image || "default-pet.jpg"} alt={pet.name} />
-                    <button
-                      className={`favorite-button ${favorites.includes(pet._id) ? "active" : ""}`}
-                      onClick={() => toggleFavorite(pet._id)}
-                    >
-                    </button>
                   </div>
                   <div className="pet-info">
                     <h3>{pet.name}</h3>
