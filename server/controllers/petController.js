@@ -3,11 +3,11 @@ import cloudinary from '../config/cloudinary.js';
 import { Readable } from 'stream';
 
 const bufferToStream = (buffer) => {
-  const readable = new Readable();
-  readable._read = () => {};
-  readable.push(buffer);
-  readable.push(null);
-  return readable;
+    const readable = new Readable();
+    readable._read = () => { };
+    readable.push(buffer);
+    readable.push(null);
+    return readable;
 };
 
 // Add a new pet
@@ -129,25 +129,25 @@ export const deletePet = async (req, res) => {
 };
 
 
-        // Get all pets
-        export const getAllPets = async (req, res) => {
-            try {
-                const pets = await Pet.find();
-                res.json({ success: true, pets });
-            } catch (error) {
-                res.status(500).json({ success: false, message: 'Error fetching pets', error: error.message });
-            }
-        };
-        
-        // Get pet by ID
-        export const getPetById = async (req, res) => {
-            try {
-                const pet = await Pet.findById(req.params.id);
-                if (!pet) {
-                    return res.status(404).json({ success: false, message: 'Pet not found' });
-                }
-                res.json({ success: true, pet });
-            } catch (error) {
-                res.status(500).json({ success: false, message: 'Error fetching pet', error: error.message });
-            }
-        };
+// Get all pets
+export const getAllPets = async (req, res) => {
+    try {
+        const pets = await Pet.find();
+        res.json({ success: true, pets });
+    } catch (error) {
+        res.status(500).json({ success: false, message: 'Error fetching pets', error: error.message });
+    }
+};
+
+// Get pet by ID
+export const getPetById = async (req, res) => {
+    try {
+        const pet = await Pet.findById(req.params.id);
+        if (!pet) {
+            return res.status(404).json({ success: false, message: 'Pet not found' });
+        }
+        res.json({ success: true, pet });
+    } catch (error) {
+        res.status(500).json({ success: false, message: 'Error fetching pet', error: error.message });
+    }
+};
