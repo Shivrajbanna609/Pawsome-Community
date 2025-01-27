@@ -89,7 +89,7 @@ const Login = () => {
         }
       } else {
         // Sign In
-        const { data } = await axios.post(backendurl + '/api/auth/login', { email, password }, { withCredentials: true });
+        const { data } = await axios.post(backendurl + '/api/auth/login', { email, password });
         if (data.success) {
           setIsLoggedin(true);
           getUserData();
