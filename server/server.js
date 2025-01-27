@@ -14,11 +14,11 @@ const port  = process.env.PORT || 4000
 
 connectDB()
 
-const allowedOrigins = ['https://pawsome-community-frontend.onrender.com']
+
 
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({origin: allowedOrigins, credentials: true}))  // for sending cookies  in response
+app.use(cors())  // for sending cookies  in response
 app.use((req, res, next) => {
     req.upload = upload;
     next();
