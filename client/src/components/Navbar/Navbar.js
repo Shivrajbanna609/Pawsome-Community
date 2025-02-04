@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import './Navbar.css';
-import PC_logo from '../../assets/PC_logo.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from 'axios';
@@ -42,9 +41,6 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <a href="/" className="logo">
-        <img src={PC_logo} alt="Logo" />
-      </a>
       <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/petpage">Pet</Link></li>
