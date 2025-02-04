@@ -37,6 +37,7 @@ export const addPet = async (req, res) => {
             age: req.body.age,
             breed: req.body.breed,
             description: req.body.description,
+            mobileNumber: req.body.mobileNumber,
             adopted: req.body.adopted === 'true',
             image: imageUrl
         });
